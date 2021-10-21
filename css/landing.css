@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(134, 0, 59);
+    background: linear-gradient( 190deg, rgba(0, 0, 51, 1) 50%, rgba(134, 0, 59, 1) 50%);
+}
+
+.box {
+    position: relative;
+    width: fit-content;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(134, 0, 59);
+    background: linear-gradient( 190deg, rgba(0, 0, 51, 1) 50%, rgba(134, 0, 59, 1) 50%);
+}
+
+.box:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+}
+
+.box:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(80px);
+}
+
+.box:before,
+.box:after {
+    background: linear-gradient(190deg, #ff006e, #000, #0000ff);
+}
+
+h1 {
+    font-size: 100px;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient( 190deg, rgba(134, 0, 59, 1) 50%, rgba(0, 0, 51, 1) 50%);
+    background-size: contain;
+    font-family: "Sigmar One", cursive;
+    padding: 0 40px;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
